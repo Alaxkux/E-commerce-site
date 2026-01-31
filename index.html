@@ -16,7 +16,7 @@
             <div class="container">
                 <div class="nav-content">
                     <div class="logo">
-                        <h1>LUXE</h1>
+                        <a href="index.html"><h1>LUXE</h1></a>
                     </div>
                     
                     <!-- Mobile Menu Toggle -->
@@ -42,20 +42,20 @@
                                 <path d="m21 21-4.35-4.35"></path>
                             </svg>
                         </button>
-                        <button class="icon-btn wishlist-btn">
+                        <a href="wishlist.html" class="icon-btn wishlist-btn">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                             </svg>
-                            <span class="badge">3</span>
-                        </button>
-                        <button class="icon-btn cart-btn">
+                            <span class="badge" id="wishlistCount">0</span>
+                        </a>
+                        <a href="checkout.html" class="icon-btn cart-btn">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="9" cy="21" r="1"></circle>
                                 <circle cx="20" cy="21" r="1"></circle>
                                 <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                             </svg>
-                            <span class="badge">2</span>
-                        </button>
+                            <span class="badge" id="cartCount">0</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                                 <span class="hero-subtitle">Spring Collection 2024</span>
                                 <h2 class="hero-title">Elegance<br>Redefined</h2>
                                 <p class="hero-description">Discover timeless pieces that blend sophistication with modern design</p>
-                                <button class="btn btn-primary">Shop Now</button>
+                                <a href="women.html" class="btn btn-primary">Shop Now</a>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                                 <span class="hero-subtitle">New Arrivals</span>
                                 <h2 class="hero-title">Summer<br>Essentials</h2>
                                 <p class="hero-description">Refresh your wardrobe with our latest curated collection</p>
-                                <button class="btn btn-primary">Explore Collection</button>
+                                <a href="men.html" class="btn btn-primary">Explore Collection</a>
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
                                 <span class="hero-subtitle">Limited Edition</span>
                                 <h2 class="hero-title">Exclusive<br>Designs</h2>
                                 <p class="hero-description">Unique pieces crafted with attention to every detail</p>
-                                <button class="btn btn-primary">View Collection</button>
+                                <a href="accessories.html" class="btn btn-primary">View Collection</a>
                             </div>
                         </div>
                     </div>
@@ -131,7 +131,7 @@
                 <p class="section-subtitle">Explore our curated collections</p>
             </div>
             <div class="categories-grid">
-                <div class="category-card">
+                <a href="women.html" class="category-card">
                     <div class="category-image">
                         <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=800&fit=crop&q=80" alt="Women's Fashion">
                         <div class="category-overlay"></div>
@@ -141,8 +141,8 @@
                         <p>345 Products</p>
                         <button class="btn btn-text">Shop Now →</button>
                     </div>
-                </div>
-                <div class="category-card">
+                </a>
+                <a href="men.html" class="category-card">
                     <div class="category-image">
                         <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?w=600&h=800&fit=crop&q=80" alt="Men's Fashion">
                         <div class="category-overlay"></div>
@@ -152,8 +152,8 @@
                         <p>287 Products</p>
                         <button class="btn btn-text">Shop Now →</button>
                     </div>
-                </div>
-                <div class="category-card">
+                </a>
+                <a href="accessories.html" class="category-card">
                     <div class="category-image">
                         <img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=600&h=800&fit=crop&q=80" alt="Accessories">
                         <div class="category-overlay"></div>
@@ -163,8 +163,8 @@
                         <p>156 Products</p>
                         <button class="btn btn-text">Shop Now →</button>
                     </div>
-                </div>
-                <div class="category-card">
+                </a>
+                <a href="shoes.html" class="category-card">
                     <div class="category-image">
                         <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600&h=800&fit=crop&q=80" alt="Shoes">
                         <div class="category-overlay"></div>
@@ -174,7 +174,7 @@
                         <p>198 Products</p>
                         <button class="btn btn-text">Shop Now →</button>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -184,7 +184,14 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Featured Products</h2>
-                <div class="carousel-controls">
+            </div>
+            <div class="products-carousel-wrapper">
+                <div class="products-carousel" id="productsCarousel">
+                    <div class="products-track" id="productsTrack">
+                        <!-- Products will be dynamically generated -->
+                    </div>
+                </div>
+                <div class="products-nav">
                     <button class="carousel-control-btn" onclick="scrollProducts('left')">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="15 18 9 12 15 6"></polyline>
@@ -197,10 +204,100 @@
                     </button>
                 </div>
             </div>
-            <div class="products-carousel" id="productsCarousel">
-                <div class="products-track" id="productsTrack">
-                    <!-- Products will be dynamically generated -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=1000&fit=crop&q=80" alt="About LUXE">
                 </div>
+                <div class="about-text">
+                    <h2 class="section-title">About LUXE</h2>
+                    <p>Founded in 2020, LUXE has been at the forefront of contemporary fashion, bringing you the finest selection of clothing, accessories, and lifestyle products.</p>
+                    <p>Our mission is to provide our customers with premium quality products that combine timeless elegance with modern design. We carefully curate each piece in our collection to ensure it meets our high standards of quality and style.</p>
+                    <p>With a commitment to sustainability and ethical practices, we work closely with our suppliers to ensure that every product is made with care for both people and the planet.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3>10K+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>Products</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Brands</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">We'd love to hear from you</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>123 Fashion Avenue, New York, NY 10001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>contact@luxe.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
@@ -262,7 +359,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer" id="contact">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
@@ -289,11 +386,10 @@
                 <div class="footer-col">
                     <h4 class="footer-heading">Shop</h4>
                     <ul class="footer-links">
-                        <li><a href="#shop">Women's Fashion</a></li>
-                        <li><a href="#shop">Men's Fashion</a></li>
-                        <li><a href="#shop">Accessories</a></li>
-                        <li><a href="#shop">New Arrivals</a></li>
-                        <li><a href="#shop">Sale</a></li>
+                        <li><a href="women.html">Women's Fashion</a></li>
+                        <li><a href="men.html">Men's Fashion</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                        <li><a href="shoes.html">Shoes</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -342,8 +438,12 @@
                     <path d="m21 21-4.35-4.35"></path>
                 </svg>
             </div>
+            <div class="search-results" id="searchResults"></div>
         </div>
     </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
 
     <script src="script.js"></script>
 </body>
