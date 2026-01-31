@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE - Modern E-Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <p class="promo-text">Free shipping on orders over $100 ✨</p>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <h1>LUXE</h1>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <div class="nav-icons">
+                        <button class="icon-btn search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                        <button class="icon-btn wishlist-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            <span class="badge">3</span>
+                        </button>
+                        <button class="icon-btn cart-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                            <span class="badge">2</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Carousel -->
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-track" id="heroTrack">
+                <div class="carousel-slide active">
+                    <div class="slide-content">
+                        <div class="container">
+                            <div class="hero-text">
+                                <span class="hero-subtitle">Spring Collection 2024</span>
+                                <h2 class="hero-title">Elegance<br>Redefined</h2>
+                                <p class="hero-description">Discover timeless pieces that blend sophistication with modern design</p>
+                                <button class="btn btn-primary">Shop Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-bg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="container">
+                            <div class="hero-text">
+                                <span class="hero-subtitle">New Arrivals</span>
+                                <h2 class="hero-title">Summer<br>Essentials</h2>
+                                <p class="hero-description">Refresh your wardrobe with our latest curated collection</p>
+                                <button class="btn btn-primary">Explore Collection</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-bg" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="container">
+                            <div class="hero-text">
+                                <span class="hero-subtitle">Limited Edition</span>
+                                <h2 class="hero-title">Exclusive<br>Designs</h2>
+                                <p class="hero-description">Unique pieces crafted with attention to every detail</p>
+                                <button class="btn btn-primary">View Collection</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-bg" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                </div>
+            </div>
+            <button class="carousel-btn prev" onclick="moveHeroSlide(-1)">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button class="carousel-btn next" onclick="moveHeroSlide(1)">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+            <div class="carousel-dots" id="heroDots"></div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Shop by Category</h2>
+                <p class="section-subtitle">Explore our curated collections</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" style="animation-delay: 0s;">
+                    <div class="category-image">
+                        <div class="category-overlay"></div>
+                        <div class="category-bg" style="background: linear-gradient(45deg, #fa709a 0%, #fee140 100%);"></div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Women</h3>
+                        <p>345 Products</p>
+                        <button class="btn btn-text">Shop Now →</button>
+                    </div>
+                </div>
+                <div class="category-card" style="animation-delay: 0.1s;">
+                    <div class="category-image">
+                        <div class="category-overlay"></div>
+                        <div class="category-bg" style="background: linear-gradient(45deg, #30cfd0 0%, #330867 100%);"></div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Men</h3>
+                        <p>287 Products</p>
+                        <button class="btn btn-text">Shop Now →</button>
+                    </div>
+                </div>
+                <div class="category-card" style="animation-delay: 0.2s;">
+                    <div class="category-image">
+                        <div class="category-overlay"></div>
+                        <div class="category-bg" style="background: linear-gradient(45deg, #a8edea 0%, #fed6e3 100%);"></div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Accessories</h3>
+                        <p>156 Products</p>
+                        <button class="btn btn-text">Shop Now →</button>
+                    </div>
+                </div>
+                <div class="category-card" style="animation-delay: 0.3s;">
+                    <div class="category-image">
+                        <div class="category-overlay"></div>
+                        <div class="category-bg" style="background: linear-gradient(45deg, #ff9a56 0%, #ff6a88 100%);"></div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Shoes</h3>
+                        <p>198 Products</p>
+                        <button class="btn btn-text">Shop Now →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Carousel -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="carousel-controls">
+                    <button class="carousel-control-btn" onclick="moveProductSlide(-1)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="carousel-control-btn" onclick="moveProductSlide(1)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="products-carousel">
+                <div class="products-track" id="productsTrack">
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image">
+                            <div class="product-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                            <button class="wishlist-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <div class="quick-view">
+                                <button class="btn btn-secondary btn-small">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(128)</span>
+                            </div>
+                            <h3 class="product-name">Elegant Summer Dress</h3>
+                            <p class="product-category">Women's Fashion</p>
+                            <div class="product-price">
+                                <span class="price-current">$89.99</span>
+                                <span class="price-original">$129.99</span>
+                            </div>
+                            <button class="btn btn-primary btn-block">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-badge sale">Sale</div>
+                        <div class="product-image">
+                            <div class="product-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                            <button class="wishlist-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <div class="quick-view">
+                                <button class="btn btn-secondary btn-small">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(89)</span>
+                            </div>
+                            <h3 class="product-name">Classic Leather Jacket</h3>
+                            <p class="product-category">Men's Outerwear</p>
+                            <div class="product-price">
+                                <span class="price-current">$149.99</span>
+                                <span class="price-original">$249.99</span>
+                            </div>
+                            <button class="btn btn-primary btn-block">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="product-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                            <button class="wishlist-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <div class="quick-view">
+                                <button class="btn btn-secondary btn-small">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(203)</span>
+                            </div>
+                            <h3 class="product-name">Designer Sunglasses</h3>
+                            <p class="product-category">Accessories</p>
+                            <div class="product-price">
+                                <span class="price-current">$79.99</span>
+                            </div>
+                            <button class="btn btn-primary btn-block">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-badge">Hot</div>
+                        <div class="product-image">
+                            <div class="product-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                            <button class="wishlist-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <div class="quick-view">
+                                <button class="btn btn-secondary btn-small">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(156)</span>
+                            </div>
+                            <h3 class="product-name">Premium Sneakers</h3>
+                            <p class="product-category">Footwear</p>
+                            <div class="product-price">
+                                <span class="price-current">$119.99</span>
+                            </div>
+                            <button class="btn btn-primary btn-block">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="product-placeholder" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
+                            <button class="wishlist-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <div class="quick-view">
+                                <button class="btn btn-secondary btn-small">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(67)</span>
+                            </div>
+                            <h3 class="product-name">Luxury Watch</h3>
+                            <p class="product-category">Accessories</p>
+                            <div class="product-price">
+                                <span class="price-current">$299.99</span>
+                            </div>
+                            <button class="btn btn-primary btn-block">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Banner -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="promo-content">
+                <span class="promo-tag">Limited Time Offer</span>
+                <h2 class="promo-title">Get 30% Off Your First Order</h2>
+                <p class="promo-text">Sign up for our newsletter and receive exclusive discounts</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" class="newsletter-input">
+                    <button class="btn btn-dark">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="promo-bg"></div>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Real reviews from real people</p>
+            </div>
+            <div class="testimonials-carousel">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Absolutely love my purchase! The quality is outstanding and the delivery was super fast. Will definitely shop here again."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Verified Buyer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Best online shopping experience I've had. The customer service is exceptional and the products are exactly as described."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <p>Verified Buyer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"I'm impressed with the attention to detail and the beautiful packaging. Makes every purchase feel special!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                            <div class="author-info">
+                                <h4>Emma Williams</h4>
+                                <p>Verified Buyer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-dots" id="testimonialDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Carousel -->
+    <section class="brands-section">
+        <div class="container">
+            <h2 class="section-title center">Featured Brands</h2>
+            <div class="brands-carousel">
+                <div class="brands-track">
+                    <div class="brand-item">GUCCI</div>
+                    <div class="brand-item">PRADA</div>
+                    <div class="brand-item">VERSACE</div>
+                    <div class="brand-item">DIOR</div>
+                    <div class="brand-item">CHANEL</div>
+                    <div class="brand-item">ARMANI</div>
+                    <div class="brand-item">GUCCI</div>
+                    <div class="brand-item">PRADA</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="footer-title">LUXE</h3>
+                    <p class="footer-text">Elevating your style with premium fashion and timeless elegance.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Women's Fashion</a></li>
+                        <li><a href="#">Men's Fashion</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUXE. All rights reserved.</p>
+                <div class="payment-methods">
+                    <span>We Accept:</span>
+                    <div class="payment-icons">
+                        <div class="payment-icon">VISA</div>
+                        <div class="payment-icon">MC</div>
+                        <div class="payment-icon">AMEX</div>
+                        <div class="payment-icon">PP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
